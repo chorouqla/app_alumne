@@ -110,14 +110,16 @@ function setupEventListeners() {
     //try id the elemento cambiado esta el select
     if (e.target.matches('.task-status-select')) {
 
-      //find la tarjeta 
-      const card = e.target.closest('.task-status-select')
+      // Encontrar la tarjeta
+      const card = e.target.closest('.task-card');
 
-      //obtener el id y el nuevo estado
+      // Obtener el ID y el nuevo estado
+      const id = card.dataset.taskId;
       const newStatus = e.target.value;
 
-      //buscar la tarea dentro del array state
+      // Buscar la tarea dentro del array state
       const task = state.find(task => task.id === id);
+
 
       //actualizar su estado
       task.status = newStatus;
@@ -130,7 +132,7 @@ function setupEventListeners() {
       }
 
       //buscar la nueva columna
-      const container = document.getElementById('${newStatus}-list');
+      const container = document.getElementById(`${newStatus}-list`);
       container.appendChild(card);
     }
   });

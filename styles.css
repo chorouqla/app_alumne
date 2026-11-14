@@ -195,3 +195,8 @@ button.btn-primary:hover {
 .collapsed {
   display: none;
 }
+
+.completed {
+  opacity: 0.7;
+  /* Puedes añadir otros estilos */
+}
