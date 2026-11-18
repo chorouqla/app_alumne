@@ -169,7 +169,7 @@ input, select {
   flex-grow: 1; 
 }
 
-/* Fix per a la visibilitat de les opcions dels desplegables */
+
 option {
   background-color: var(--card-bg);
   color: var(--text-main);
@@ -198,5 +198,4 @@ button.btn-primary:hover {
 
 .completed {
   opacity: 0.7;
-  /* Puedes añadir otros estilos */
 }
